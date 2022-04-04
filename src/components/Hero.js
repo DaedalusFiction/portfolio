@@ -20,7 +20,7 @@ const Hero = () => {
         <Box
             sx={{
                 // backgroundImage: `url(${earth})`,
-                backgroundImage: `linear-gradient(to bottom, rgba(20, 20, 20, 0.2), rgba(0, 0, 0, 0.8)),
+                backgroundImage: `linear-gradient(to bottom, rgba(20, 20, 20, 0.4), rgba(0, 0, 0, 0.8)),
   url(${earth})`,
                 backgroundSize: "cover",
                 padding: "20vw 0",
