@@ -13,6 +13,11 @@ const darkTheme = createTheme({
             main: "#F3CA40",
         },
     },
+    typography: {
+        p: {
+            color: "var(--color-primary)",
+        },
+    },
     components: {
         // Name of the component
         MuiButton: {
