@@ -9,6 +9,7 @@ import InfoCard from "../components/InfoCard";
 
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
+import InfoCardHorizontal from "../components/InfoCardHorizontal";
 
 const Home = () => {
     const [quoteInView, setQuoteInView] = useState(false);
@@ -71,7 +72,7 @@ const Home = () => {
             </Container>
 
             <Container sx={{ marginTop: "8rem" }}>
-                <Grid container>
+                <Grid container spacing={6}>
                     <Grid
                         item
                         xs={12}
@@ -103,9 +104,31 @@ const Home = () => {
                         </InView>
                     </Grid>
                     <Grid item xs={12} md={7}>
-                        <Card>
-                            <Typography variant="h3">Hey yo hey</Typography>
-                        </Card>
+                        <InfoCardHorizontal
+                            delay={400}
+                            title="Design"
+                            description="Provide your own wireframes, or let me
+                                create a unique and inspiring design in 
+                                Figma, an easy-to-use browser-based 
+                                design software that will allow you to 
+                                collaborate alongside me in real time"
+                        />
+                        <InfoCardHorizontal
+                            delay={600}
+                            title="Deploy"
+                            description="Websites are created in React.js and MUI, 
+                                then hosted on Netlify. Netlify is free up
+                                to a certain amount of traffic, and when
+                                your business takes off, scaling up is as
+                                simple as upgrading your plan"
+                        />
+                        <InfoCardHorizontal
+                            delay={900}
+                            title="Maintain"
+                            description="Want to update or add to your website 
+                                sometime down the line? Implement small to medium alterations
+                                at a modest hourly rate and larger features on a case-by-case basis"
+                        />
                     </Grid>
                 </Grid>
             </Container>
