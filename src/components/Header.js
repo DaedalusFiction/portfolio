@@ -11,6 +11,7 @@ const Header = () => {
                 top: "0",
                 padding: "1em 0",
                 borderBottom: "1px solid var(--color-primary-dark)",
+                zIndex: "3000",
             }}
         >
             <Container

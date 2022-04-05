@@ -127,7 +127,7 @@ const Home = () => {
                             title="Maintain"
                             description="Want to update or add to your website 
                                 sometime down the line? Implement small to medium alterations
-                                at a modest hourly rate and larger features on a case-by-case basis"
+                                at a modest hourly rate and larger features on a case-by-case basis, so that your website continues to grow as you do"
                         />
                     </Grid>
                 </Grid>

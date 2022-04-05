@@ -12,7 +12,7 @@ import { InView } from "react-intersection-observer";
 const InfoCard = ({ title, photo, description, delay }) => {
     const [isInView, setIsInView] = useState(false);
     return (
-        <InView as="div" onChange={(inView, entry) => setIsInView(true)}>
+        <InView as="div" onChange={(inView, entry) => setIsInView(inView)}>
             <Fade
                 in={isInView}
                 direction="up"
