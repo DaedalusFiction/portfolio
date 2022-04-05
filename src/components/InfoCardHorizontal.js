@@ -15,9 +15,8 @@ const InfoCardHorizontal = ({ title, description, delay }) => {
 
     return (
         <InView as="div" onChange={(inView, entry) => setIsInView(inView)}>
-            <Collapse
+            <Fade
                 in={isInView}
-                orientation="horizontal"
                 timeout={{
                     enter: delay,
                 }}
@@ -69,7 +68,7 @@ const InfoCardHorizontal = ({ title, description, delay }) => {
                         </Typography>
                     </Box>
                 </Box>
-            </Collapse>
+            </Fade>
         </InView>
     );
 };
