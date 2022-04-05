@@ -22,7 +22,13 @@ const InfoCard = ({ title, photo, description, delay }) => {
                 sx={{ display: "flex", justifyContent: "center" }}
             >
                 <Box>
-                    <Card sx={{ maxWidth: 345 }}>
+                    <Card
+                        sx={{
+                            maxWidth: 345,
+                            backgroundColor: "#000000",
+                            border: "1px solid var(--color-primary-dark)",
+                        }}
+                    >
                         <CardMedia
                             component="img"
                             height="140"
@@ -34,10 +40,11 @@ const InfoCard = ({ title, photo, description, delay }) => {
                                 gutterBottom
                                 variant="h5"
                                 component="div"
+                                sx={{ color: "white", fontWeight: "bold" }}
                             >
                                 {title}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body2" sx={{ color: "white" }}>
                                 {description}
                             </Typography>
                         </CardContent>

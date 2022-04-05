@@ -14,6 +14,15 @@ const darkTheme = createTheme({
         },
     },
     typography: {
+        h1: {
+            color: "white",
+        },
+        h2: {
+            color: "white",
+        },
+        h3: {
+            color: "white",
+        },
         p: {
             color: "var(--color-primary)",
         },
@@ -30,6 +39,22 @@ const darkTheme = createTheme({
                     padding: ".5em 1em",
 
                     color: "white",
+                    "&:hover": {
+                        transition: "3000ms",
+                        background:
+                            "linear-gradient(-45deg, #FE6B8B 30%, #FF8E53 90%)",
+                    },
+                },
+            },
+        },
+        MuiCard: {
+            styleOverrides: {
+                // Name of the slot
+                root: {
+                    background:
+                        "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+                    border: "1px solid var(--color-primary-dark)",
+
                     "&:hover": {
                         transition: "3000ms",
                         background:

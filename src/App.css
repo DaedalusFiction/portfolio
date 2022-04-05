@@ -1,6 +1,7 @@
 :root {
     --bg-dark: #000000;
     --color-primary: #d5c8c8;
+    --color-primary-dark: #7c7575;
 }
 
 @keyframes App-logo-spin {

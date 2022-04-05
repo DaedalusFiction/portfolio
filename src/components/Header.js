@@ -6,11 +6,11 @@ const Header = () => {
     return (
         <Box
             sx={{
-                backgroundColor: "rgba(0 ,0 ,0 ,0.5)",
+                backgroundColor: "rgba(0 ,0 ,0 ,0.8)",
                 position: "sticky",
                 top: "0",
                 padding: "1em 0",
-                borderBottom: "1px solid var(--color-primary)",
+                borderBottom: "1px solid var(--color-primary-dark)",
             }}
         >
             <Container
