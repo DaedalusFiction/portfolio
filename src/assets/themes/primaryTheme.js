@@ -33,10 +33,12 @@ const darkTheme = createTheme({
             styleOverrides: {
                 // Name of the slot
                 root: {
+                    fontSize: "1.2rem",
                     background:
                         "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
                     border: 0,
-                    padding: ".5em 1em",
+                    padding: ".75em 1.5em",
+                    textDecoration: "none",
 
                     color: "white",
                     "&:hover": {

@@ -79,10 +79,7 @@ const Hero = () => {
                             rel="noreferrer"
                             underline="none"
                         >
-                            <Button
-                                sx={{ fontSize: "1.2rem" }}
-                                endIcon={<FiArrowRight />}
-                            >
+                            <Button endIcon={<FiArrowRight />}>
                                 Portfolio
                             </Button>
                         </Link>
@@ -94,12 +91,7 @@ const Hero = () => {
                             rel="noreferrer"
                             underline="none"
                         >
-                            <Button
-                                sx={{ fontSize: "1.2rem" }}
-                                endIcon={<FiArrowRight />}
-                            >
-                                Github
-                            </Button>
+                            <Button endIcon={<FiArrowRight />}>Github</Button>
                         </Link>
                     </Slide>
                 </Box>

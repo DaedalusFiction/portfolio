@@ -6,9 +6,9 @@ import code3 from "../assets/images/code3.jpg";
 import code2 from "../assets/images/code2.jpg";
 import chip from "../assets/images/chip.jpg";
 import mobile from "../assets/images/mobile.jpg";
-import sicktoothScreencap from "../assets/images/sicktoothScreencap.png";
-import roadtripScreencap from "../assets/images/roadtripScreencap.png";
-import snackbarScreencap from "../assets/images/snackbarScreencap.png";
+import sicktoothScreencap from "../assets/images/sicktoothScreencapBlurred.png";
+import roadtripScreencap from "../assets/images/roadtripScreencapBlurred.png";
+import snackbarScreencap from "../assets/images/snackbarScreencapBlurred.png";
 
 import Hero from "../components/Hero";
 import InfoCard from "../components/InfoCard";
@@ -91,7 +91,6 @@ const Home = () => {
                             as="div"
                             onChange={(inView, entry) => {
                                 setQuoteInView(inView);
-                                console.log("viewed");
                             }}
                         >
                             <Fade in={quoteInView} timeout={800}>
@@ -102,7 +101,7 @@ const Home = () => {
                                 >
                                     "David was absolutely wonderful to work
                                     with. He listened carefully to my needs and
-                                    delivered exactly what I was looking for"
+                                    delivered exactly what I was looking for
                                 </Typography>
                             </Fade>
                         </InView>
@@ -136,7 +135,7 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Container>
-            <Box spacing={1}>
+            <Box>
                 <WebsitePreview
                     align="end"
                     type="Literary Magazine"
