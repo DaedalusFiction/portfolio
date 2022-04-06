@@ -1,14 +1,18 @@
 import { Box, Card, Container, Fade, Grid, Typography } from "@mui/material";
-import Hero from "../components/Hero";
+import { InView } from "react-intersection-observer";
+import { useState } from "react";
 
 import code3 from "../assets/images/code3.jpg";
 import code2 from "../assets/images/code2.jpg";
 import chip from "../assets/images/chip.jpg";
 import mobile from "../assets/images/mobile.jpg";
-import InfoCard from "../components/InfoCard";
+import sicktoothScreencap from "../assets/images/sicktoothScreencap.png";
+import roadtripScreencap from "../assets/images/roadtripScreencap.png";
+import snackbarScreencap from "../assets/images/snackbarScreencap.png";
 
-import { InView } from "react-intersection-observer";
-import { useState } from "react";
+import Hero from "../components/Hero";
+import InfoCard from "../components/InfoCard";
+import WebsitePreview from "../components/WebsitePreview";
 import InfoCardHorizontal from "../components/InfoCardHorizontal";
 
 const Home = () => {
@@ -54,7 +58,7 @@ const Home = () => {
                             photo={code3}
                             description="Important data stored in Google's cloud
                                     service, Firebase, so that it is always
-                                    restorable in case something happens"
+                                    restorable, just in case something happens"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
@@ -71,7 +75,7 @@ const Home = () => {
                 </Grid>
             </Container>
 
-            <Container sx={{ marginTop: "8rem" }}>
+            <Container sx={{ margin: "8rem auto" }}>
                 <Grid container spacing={6}>
                     <Grid
                         item
@@ -132,6 +136,35 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Box spacing={1}>
+                <WebsitePreview
+                    align="end"
+                    type="Literary Magazine"
+                    title="SICKTOOTH"
+                    content="Created in React and MUI"
+                    background={sicktoothScreencap}
+                    github="https://github.com/DaedalusFiction/sicktooth"
+                    website="https://www.sicktooth.com/"
+                />
+                <WebsitePreview
+                    align="start"
+                    type="Landing Page"
+                    title="SNACKBAR"
+                    content="Created in React and MUI"
+                    background={snackbarScreencap}
+                    github="https://github.com/DaedalusFiction/snackbar"
+                    website="https://www.snackbarband.com/"
+                />
+                <WebsitePreview
+                    align="end"
+                    type="Event"
+                    title="The Great Road Trip"
+                    content="Created in React and MUI"
+                    background={roadtripScreencap}
+                    github="https://github.com/DaedalusFiction/roadtrip"
+                    website="https://www.thegreatroadtrip.net/"
+                />
+            </Box>
         </Box>
     );
 };

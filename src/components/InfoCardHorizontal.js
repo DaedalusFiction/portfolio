@@ -21,12 +21,16 @@ const InfoCardHorizontal = ({ title, description, delay }) => {
                     enter: delay,
                 }}
                 sx={{
-                    display: "flex",
-                    justifyContent: "center",
+                    display: { xs: "block", sm: "flex" },
+                    // justifyContent: "center",
                     margin: "1em",
                 }}
             >
-                <Box sx={{ display: "flex" }}>
+                <Box
+                // sx={{
+                //     display: "flex",
+                // }}
+                >
                     <Card
                         sx={{
                             minWidth: "10em",
@@ -34,7 +38,10 @@ const InfoCardHorizontal = ({ title, description, delay }) => {
                             justifyContent: "center",
                             alignItems: "center",
                             border: "1px solid var(--color-primary-dark)",
-                            borderRadius: "3px 0 0 3px",
+                            borderRadius: {
+                                xs: "3px 3px 0 0",
+                                md: "3px 0 0 3px",
+                            },
                         }}
                     >
                         <Typography
@@ -57,6 +64,10 @@ const InfoCardHorizontal = ({ title, description, delay }) => {
                             borderTop: "1px solid var(--color-primary)",
                             borderRight: "1px solid var(--color-primary)",
                             borderBottom: "1px solid var(--color-primary)",
+                            borderLeft: {
+                                xs: "1px solid var(--color-primary)",
+                                sm: "none",
+                            },
                         }}
                     >
                         <Typography

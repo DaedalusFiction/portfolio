@@ -64,33 +64,44 @@ const Hero = () => {
                         </Box>
                     </Slide>
                 </Box>
-                <Box sx={{ padding: "2em 0", display: "flex", gap: "1em" }}>
-                    <Link
-                        href="https://github.com/DaedalusFiction"
-                        target="_blank"
-                        rel="noreferrer"
-                        underline="none"
-                    >
-                        <Button
-                            sx={{ fontSize: "1.2rem" }}
-                            endIcon={<FiArrowRight />}
+                <Box
+                    sx={{
+                        padding: "2em 0",
+                        display: "flex",
+                        gap: "1em",
+                        overflow: "hidden",
+                    }}
+                >
+                    <Slide direction="right" in={true} timeout={750}>
+                        <Link
+                            href="https://github.com/DaedalusFiction"
+                            target="_blank"
+                            rel="noreferrer"
+                            underline="none"
                         >
-                            Portfolio
-                        </Button>
-                    </Link>
-                    <Link
-                        href="https://github.com/DaedalusFiction"
-                        target="_blank"
-                        rel="noreferrer"
-                        underline="none"
-                    >
-                        <Button
-                            sx={{ fontSize: "1.2rem" }}
-                            endIcon={<FiArrowRight />}
+                            <Button
+                                sx={{ fontSize: "1.2rem" }}
+                                endIcon={<FiArrowRight />}
+                            >
+                                Portfolio
+                            </Button>
+                        </Link>
+                    </Slide>
+                    <Slide direction="right" in={true} timeout={350}>
+                        <Link
+                            href="https://github.com/DaedalusFiction"
+                            target="_blank"
+                            rel="noreferrer"
+                            underline="none"
                         >
-                            Github
-                        </Button>
-                    </Link>
+                            <Button
+                                sx={{ fontSize: "1.2rem" }}
+                                endIcon={<FiArrowRight />}
+                            >
+                                Github
+                            </Button>
+                        </Link>
+                    </Slide>
                 </Box>
             </Container>
         </Box>
