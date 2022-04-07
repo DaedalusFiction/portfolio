@@ -14,6 +14,7 @@ import Hero from "../components/Hero";
 import InfoCard from "../components/InfoCard";
 import WebsitePreview from "../components/WebsitePreview";
 import InfoCardHorizontal from "../components/InfoCardHorizontal";
+import TechIconCard from "../components/TechIconCard";
 
 const Home = () => {
     const [quoteInView, setQuoteInView] = useState(false);
@@ -21,7 +22,6 @@ const Home = () => {
     return (
         <Box>
             <Hero />
-
             <Container maxWidth="lg">
                 <Typography
                     variant="h2"
@@ -74,7 +74,6 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Container>
-
             <Container sx={{ margin: "8rem auto" }}>
                 <Grid container spacing={6}>
                     <Grid
@@ -164,6 +163,7 @@ const Home = () => {
                     website="https://www.thegreatroadtrip.net/"
                 />
             </Box>
+            <TechIconCard />
         </Box>
     );
 };
