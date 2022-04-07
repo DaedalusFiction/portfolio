@@ -1,4 +1,12 @@
-import { Box, Card, Container, Fade, Grid, Typography } from "@mui/material";
+import {
+    Box,
+    Button,
+    Card,
+    Container,
+    Fade,
+    Grid,
+    Typography,
+} from "@mui/material";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
 
@@ -15,6 +23,7 @@ import InfoCard from "../components/InfoCard";
 import WebsitePreview from "../components/WebsitePreview";
 import InfoCardHorizontal from "../components/InfoCardHorizontal";
 import TechIconCard from "../components/TechIconCard";
+import svgpaths from "../assets/svgs/svgPaths.json";
 
 const Home = () => {
     const [quoteInView, setQuoteInView] = useState(false);
@@ -153,6 +162,7 @@ const Home = () => {
                     github="https://github.com/DaedalusFiction/snackbar"
                     website="https://www.snackbarband.com/"
                 />
+                <TechIconCard path={svgpaths.github} />
                 <WebsitePreview
                     align="end"
                     type="Event"
@@ -163,7 +173,7 @@ const Home = () => {
                     website="https://www.thegreatroadtrip.net/"
                 />
             </Box>
-            <TechIconCard />
+            <TechIconCard path={svgpaths.javascript} />
         </Box>
     );
 };
