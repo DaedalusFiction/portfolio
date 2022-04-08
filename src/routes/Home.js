@@ -172,15 +172,27 @@ const Home = () => {
                     website="https://www.thegreatroadtrip.net/"
                 />
             </Box>
-            <Container maxWidth="md">
+            <Container maxWidth="md" sx={{ marginTop: "8em" }}>
+                <Typography
+                    variant="h3"
+                    sx={{ textAlign: "center", marginBottom: "1em" }}
+                >
+                    Technologies
+                </Typography>
                 <Grid container>
-                    <Grid item xs={4} sm={3} md={2}>
+                    <Grid item xs={4} sm={3} md={2} sx={{ paddingTop: ".2em" }}>
                         <TechIconCard path={"react"} />
                     </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
+                    <Grid item xs={4} sm={3} md={2} sx={{ paddingTop: ".4em" }}>
                         <TechIconCard path={"material"} />
                     </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
+                    <Grid
+                        item
+                        xs={4}
+                        sm={3}
+                        md={2}
+                        sx={{ paddingLeft: ".5em" }}
+                    >
                         <TechIconCard path={"firebase"} />
                     </Grid>
                     <Grid item xs={4} sm={3} md={2}>
@@ -201,7 +213,7 @@ const Home = () => {
                     <Grid item xs={4} sm={3} md={2}>
                         <TechIconCard path={"css3"} />
                     </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
+                    <Grid item xs={4} sm={3} md={2} sx={{ paddingTop: "2em" }}>
                         <TechIconCard path={"npm"} />
                     </Grid>
                 </Grid>
