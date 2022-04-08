@@ -1,22 +1,33 @@
-import { Box, Icon, Container, Button } from "@mui/material";
-import React from "react";
+import { Box, Container, Button } from "@mui/material";
+import React, { useEffect, useState } from "react";
 
 const TechIconCard = ({ path }) => {
     const pathId = path.substr(0, 10).split(" ").join("");
+    const [d, setD] = useState("");
+
+    useEffect(() => {
+        async function getPath() {
+            const resp = await fetch(`./svgs/${path}.svg`);
+            // console.log(await resp.text());
+            const parser = new DOMParser();
+            const svg = parser.parseFromString(
+                await resp.text(),
+                "image/svg+xml"
+            );
+            // console.log(svg);
+            const pathNode = svg.querySelector("path");
+            // console.log(path);
+            setD(pathNode.getAttribute("d"));
+        }
+        getPath();
+    }, [path]);
 
     return (
         <Container>
-            <Button
-                onClick={() => {
-                    console.log(pathId);
-                }}
-            >
-                click
-            </Button>
             <Box
                 style={{
-                    width: "5em",
-                    height: "5em",
+                    width: "5rem",
+                    height: "5rem",
                     background:
                         "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
                     clipPath: `url(#${pathId})`,
@@ -24,7 +35,7 @@ const TechIconCard = ({ path }) => {
             />
             <svg width="0" height="0">
                 <clipPath id={pathId} clipPathUnits="objectBoundingBox">
-                    <path d={path}></path>
+                    <path d={d}></path>
                 </clipPath>
             </svg>
         </Container>

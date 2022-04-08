@@ -23,7 +23,6 @@ import InfoCard from "../components/InfoCard";
 import WebsitePreview from "../components/WebsitePreview";
 import InfoCardHorizontal from "../components/InfoCardHorizontal";
 import TechIconCard from "../components/TechIconCard";
-import svgpaths from "../assets/svgs/svgPaths.json";
 
 const Home = () => {
     const [quoteInView, setQuoteInView] = useState(false);
@@ -162,7 +161,7 @@ const Home = () => {
                     github="https://github.com/DaedalusFiction/snackbar"
                     website="https://www.snackbarband.com/"
                 />
-                <TechIconCard path={svgpaths.github} />
+
                 <WebsitePreview
                     align="end"
                     type="Event"
@@ -173,7 +172,40 @@ const Home = () => {
                     website="https://www.thegreatroadtrip.net/"
                 />
             </Box>
-            <TechIconCard path={svgpaths.javascript} />
+            <Container maxWidth="md">
+                <Grid container>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"react"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"material"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"firebase"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"github"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"javascript"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"netlify"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"oauth"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"html5"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"css3"} />
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+                        <TechIconCard path={"npm"} />
+                    </Grid>
+                </Grid>
+            </Container>
         </Box>
     );
 };
