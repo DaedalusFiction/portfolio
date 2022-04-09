@@ -110,7 +110,7 @@ const Home = () => {
                                     "David was absolutely wonderful to work
                                     with. He listened carefully to my needs and
                                     delivered exactly what I was looking for.
-                                    10/10 would recommend.""
+                                    10/10 would recommend."
                                 </Typography>
                             </Fade>
                         </InView>
