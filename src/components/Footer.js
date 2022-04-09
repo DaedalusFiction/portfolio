@@ -39,7 +39,7 @@ const Footer = () => {
                             Playlist 23
                         </Link>
                         <Link
-                            href="https://snackbar.com"
+                            href="https://snackbarband.com"
                             target="_blank"
                             rel="noreferrer"
                             underline="hover"

@@ -6,6 +6,7 @@ import Home from "./routes/Home";
 import Portfolio from "./routes/Portfolio";
 import Services from "./routes/Services";
 import { ThemeProvider } from "@emotion/react";
+import Contact from "./routes/Contact";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="portfolio" element={<Portfolio />} />
                 <Route path="services" element={<Services />} />
+                <Route path="contact" element={<Contact />} />
             </Route>
         </Routes>
     );
