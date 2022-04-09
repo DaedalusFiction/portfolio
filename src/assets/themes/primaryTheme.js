@@ -23,6 +23,10 @@ const darkTheme = createTheme({
         h3: {
             color: "white",
         },
+        h5: {
+            color: "var(--color-primary)",
+            fontWeight: "bold",
+        },
         p: {
             color: "var(--color-primary)",
         },

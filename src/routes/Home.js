@@ -5,6 +5,7 @@ import {
     Container,
     Fade,
     Grid,
+    Tooltip,
     Typography,
 } from "@mui/material";
 import { InView } from "react-intersection-observer";
@@ -108,7 +109,8 @@ const Home = () => {
                                 >
                                     "David was absolutely wonderful to work
                                     with. He listened carefully to my needs and
-                                    delivered exactly what I was looking for
+                                    delivered exactly what I was looking for.
+                                    10/10 would recommend.""
                                 </Typography>
                             </Fade>
                         </InView>
@@ -172,7 +174,10 @@ const Home = () => {
                     website="https://www.thegreatroadtrip.net/"
                 />
             </Box>
-            <Container maxWidth="md" sx={{ marginTop: "8em" }}>
+            <Container
+                maxWidth="sm"
+                sx={{ marginTop: "8em", marginBottom: "8em" }}
+            >
                 <Typography
                     variant="h3"
                     sx={{ textAlign: "center", marginBottom: "1em" }}
@@ -180,42 +185,61 @@ const Home = () => {
                     Technologies
                 </Typography>
                 <Grid container>
-                    <Grid item xs={4} sm={3} md={2} sx={{ paddingTop: ".2em" }}>
-                        <TechIconCard path={"react"} />
-                    </Grid>
-                    <Grid item xs={4} sm={3} md={2} sx={{ paddingTop: ".4em" }}>
-                        <TechIconCard path={"material"} />
-                    </Grid>
-                    <Grid
-                        item
-                        xs={4}
-                        sm={3}
-                        md={2}
-                        sx={{ paddingLeft: ".5em" }}
-                    >
-                        <TechIconCard path={"firebase"} />
-                    </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
-                        <TechIconCard path={"github"} />
-                    </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
-                        <TechIconCard path={"javascript"} />
-                    </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
-                        <TechIconCard path={"netlify"} />
-                    </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
-                        <TechIconCard path={"oauth"} />
-                    </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
-                        <TechIconCard path={"html5"} />
-                    </Grid>
-                    <Grid item xs={4} sm={3} md={2}>
-                        <TechIconCard path={"css3"} />
-                    </Grid>
-                    <Grid item xs={4} sm={3} md={2} sx={{ paddingTop: "2em" }}>
-                        <TechIconCard path={"npm"} />
-                    </Grid>
+                    <Tooltip title="React" followCursor>
+                        <Grid item xs={6} sm={3} sx={{ paddingTop: ".2em" }}>
+                            <TechIconCard path={"react"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="Material UI" followCursor>
+                        <Grid item xs={6} sm={3} sx={{ paddingTop: ".6em" }}>
+                            <TechIconCard path={"material"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="Firebase" followCursor>
+                        <Grid item xs={6} sm={3} sx={{ paddingLeft: "1.2em" }}>
+                            <TechIconCard path={"firebase"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="OAuth 2.0" followCursor>
+                        <Grid item xs={6} sm={3}>
+                            <TechIconCard path={"oauth"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="Node Package Manager" followCursor>
+                        <Grid item xs={6} sm={3} sx={{ paddingTop: "2em" }}>
+                            <TechIconCard path={"npm"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="Github" followCursor>
+                        <Grid item xs={6} sm={3}>
+                            <TechIconCard path={"github"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="netlify" followCursor>
+                        <Grid item xs={6} sm={3}>
+                            <TechIconCard path={"netlify"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="JavaScript" followCursor>
+                        <Grid item xs={6} sm={3} sx={{}}>
+                            <TechIconCard path={"javascript"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="HTML5" followCursor>
+                        <Grid item xs={6} sm={3} sx={{ paddingLeft: ".7em" }}>
+                            <TechIconCard path={"html5"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="CSS" followCursor>
+                        <Grid item xs={6} sm={3}>
+                            <TechIconCard path={"css3"} />
+                        </Grid>
+                    </Tooltip>
+                    <Tooltip title="Figma" followCursor>
+                        <Grid item xs={6} sm={3} sx={{ paddingLeft: "1.75em" }}>
+                            <TechIconCard path={"figma"} />
+                        </Grid>
+                    </Tooltip>
                 </Grid>
             </Container>
         </Box>

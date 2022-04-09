@@ -23,22 +23,21 @@ const TechIconCard = ({ path }) => {
     }, [path]);
 
     return (
-        <Container>
-            <Box
-                style={{
-                    width: "5rem",
-                    height: "5rem",
-                    background:
-                        "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-                    clipPath: `url(#${pathId})`,
-                }}
-            />
-            <svg width="0" height="0">
+        <Box
+            style={{
+                width: "5rem",
+                height: "5rem",
+                background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+                clipPath: `url(#${pathId})`,
+                margin: "1em auto",
+            }}
+        >
+            <svg width="0" height="0" viewBox="10 330 100 100">
                 <clipPath id={pathId} clipPathUnits="objectBoundingBox">
                     <path d={d}></path>
                 </clipPath>
             </svg>
-        </Container>
+        </Box>
     );
 };
 
