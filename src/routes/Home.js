@@ -146,7 +146,7 @@ const Home = () => {
             </Container>
             <Box>
                 <WebsitePreview
-                    align="end"
+                    align="right"
                     type="Literary Magazine"
                     title="SICKTOOTH"
                     content="Created in React and MUI"
@@ -155,7 +155,7 @@ const Home = () => {
                     website="https://www.sicktooth.com/"
                 />
                 <WebsitePreview
-                    align="start"
+                    align="left"
                     type="Landing Page"
                     title="SNACKBAR"
                     content="Created in React and MUI"
@@ -165,7 +165,7 @@ const Home = () => {
                 />
 
                 <WebsitePreview
-                    align="end"
+                    align="right"
                     type="Event"
                     title="The Great Road Trip"
                     content="Created in React and MUI"

@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Layout from "./routes/Layout";
 import { Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import Portfolio from "./routes/Portfolio";
 import Services from "./routes/Services";
-import { ThemeProvider } from "@emotion/react";
 import Contact from "./routes/Contact";
 
 function App() {

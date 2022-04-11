@@ -39,16 +39,16 @@ const darkTheme = createTheme({
                 root: {
                     fontSize: "1.2rem",
                     background:
-                        "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+                        "linear-gradient(-45deg, #aaffa9 30%, #11ffbd 90%)",
                     border: 0,
                     padding: ".75em 1.5em",
                     textDecoration: "none",
 
-                    color: "white",
+                    color: "black",
                     "&:hover": {
                         transition: "3000ms",
                         background:
-                            "linear-gradient(-45deg, #FE6B8B 30%, #FF8E53 90%)",
+                            "linear-gradient(45deg, #aaffa9 30%, #11ffbd 90%)",
                     },
                 },
             },
