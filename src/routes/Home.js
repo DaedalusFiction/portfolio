@@ -51,7 +51,7 @@ const Home = () => {
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={6} md={3}>
                         <InfoCard
-                            delay={1700}
+                            delay={500}
                             title="Unique"
                             photo={code2}
                             description="Fully customized designs, built from the
@@ -62,7 +62,7 @@ const Home = () => {
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <InfoCard
-                            delay={500}
+                            delay={800}
                             title="Responsive"
                             photo={mobile}
                             description="Mobile-first designs, so that you can reach the widest
@@ -71,9 +71,9 @@ const Home = () => {
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <InfoCard
-                            delay={800}
+                            delay={1200}
                             title="Reliable"
-                            photo={stones}
+                            photo={code3}
                             description="Important data stored in Google's cloud
                                     service, Firebase, so that it is always
                                     restorable, just in case something happens"
@@ -81,7 +81,7 @@ const Home = () => {
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <InfoCard
-                            delay={1200}
+                            delay={1700}
                             title="Secure"
                             photo={chip}
                             description="Authentication and authorization handled by Google's OAuth 2.0, the internet's most used and trusted authentication service"
