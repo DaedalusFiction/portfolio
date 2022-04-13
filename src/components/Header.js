@@ -1,10 +1,27 @@
-import { Box, Container } from "@mui/material";
-import React from "react";
+import {
+    Box,
+    Container,
+    IconButton,
+    Menu,
+    MenuItem,
+    Typography,
+} from "@mui/material";
+import React, { useState } from "react";
 import { Link } from "@mui/material";
 import { useLocation } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
     const location = useLocation();
+    const [anchorElNav, setAnchorElNav] = useState(null);
+
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
 
     return (
         <Box
@@ -13,8 +30,8 @@ const Header = () => {
                 position: "sticky",
                 top: "0",
                 padding: "1em 0",
-                borderBottom: "1px solid var(--color-primary-dark)",
-                zIndex: "3000",
+                borderBottom: "1px solid var(--color-secondary)",
+                zIndex: "3",
             }}
         >
             <Container
@@ -28,6 +45,7 @@ const Header = () => {
                         href="/"
                         underline="none"
                         sx={{
+                            display: { xs: "none", md: "flex" },
                             color:
                                 location.pathname === "/"
                                     ? "var(--color-primary)"
@@ -79,10 +97,91 @@ const Header = () => {
                                 location.pathname === "/contact"
                                     ? "var(--color-primary)"
                                     : "var(--color-primary-dark)",
+                            "&:hover": {
+                                color: "var(--color-primary)",
+                            },
                         }}
                     >
                         Contact
                     </Link>
+                </Box>
+                <Box
+                    sx={{
+                        flexGrow: 1,
+                        display: { xs: "flex", md: "none" },
+                        justifyContent: "flex-end",
+                    }}
+                >
+                    <IconButton
+                        size="large"
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        onClick={handleOpenNavMenu}
+                        color="inherit"
+                    >
+                        <MenuIcon style={{ color: "var(--color-primary)" }} />
+                    </IconButton>
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{
+                            vertical: "bottom",
+                            horizontal: "left",
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: "top",
+                            horizontal: "left",
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                        sx={{
+                            display: { xs: "block", md: "none" },
+                            zIndex: "4",
+                        }}
+                    >
+                        <Link href="/" underline="none">
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography
+                                    textAlign="center"
+                                    sx={{ color: "black" }}
+                                >
+                                    Home
+                                </Typography>
+                            </MenuItem>
+                        </Link>
+                        <Link href="services" underline="none">
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography
+                                    textAlign="center"
+                                    sx={{ color: "black" }}
+                                >
+                                    Services
+                                </Typography>
+                            </MenuItem>
+                        </Link>
+                        <Link href="portfolio" underline="none">
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography
+                                    textAlign="center"
+                                    sx={{ color: "black" }}
+                                >
+                                    Portfolio
+                                </Typography>
+                            </MenuItem>
+                        </Link>
+                        <Link href="contact" underline="none">
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography
+                                    textAlign="center"
+                                    sx={{ color: "black" }}
+                                >
+                                    Contact
+                                </Typography>
+                            </MenuItem>
+                        </Link>
+                    </Menu>
                 </Box>
             </Container>
         </Box>

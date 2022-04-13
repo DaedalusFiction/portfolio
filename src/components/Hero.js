@@ -20,7 +20,7 @@ const Hero = () => {
         <Box
             sx={{
                 // backgroundImage: `url(${earth})`,
-                backgroundImage: `linear-gradient(to bottom, rgba(20, 20, 20, 0.4), rgba(0, 0, 0, 0.8)),
+                backgroundImage: `linear-gradient(to bottom, rgba(20, 20, 20, 0.4), rgba(23, 23, 23, 1)),
   url(${earth})`,
                 backgroundSize: "cover",
                 padding: "20vw 0 10vw 0",
@@ -38,7 +38,6 @@ const Hero = () => {
                         variant="h1"
                         component="h1"
                         sx={{ color: "white", fontSize: "4rem" }}
-                        gutterBottom
                     >
                         Hello! I'm David Sorensen
                     </Typography>
@@ -70,6 +69,7 @@ const Hero = () => {
                         display: "flex",
                         gap: "1em",
                         overflow: "hidden",
+                        flexWrap: "wrap",
                     }}
                 >
                     <Slide direction="right" in={true} timeout={750}>

@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <Box sx={{ borderTop: "1px solid var(--color-primary-dark)" }}>
+        <Box sx={{ borderTop: "1px solid var(--color-secondary)" }}>
             <Container sx={{ marginTop: "5rem", marginBottom: "5rem" }}>
                 <Grid container>
                     <Grid

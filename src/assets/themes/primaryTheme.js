@@ -4,7 +4,7 @@ const darkTheme = createTheme({
     palette: {
         type: "dark",
         background: {
-            default: "#000000",
+            default: "#171717",
         },
         primary: {
             main: "#d5c8c8",
@@ -16,16 +16,29 @@ const darkTheme = createTheme({
     typography: {
         h1: {
             color: "white",
+            fontFamily: "Oxanium",
+            fontSize: "4rem",
         },
         h2: {
             color: "white",
+            fontFamily: "Oxanium",
         },
         h3: {
             color: "white",
+            fontFamily: "Oxanium",
+        },
+        h4: {
+            // fontFamily: "Oxanium",
         },
         h5: {
             color: "var(--color-primary)",
+            fontFamily: "Oxanium",
             fontWeight: "bold",
+        },
+        h6: {
+            color: "var(--color-primary)",
+
+            fontSize: "1.3rem",
         },
         p: {
             color: "var(--color-primary)",

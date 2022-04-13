@@ -40,7 +40,10 @@ const InfoCard = ({ title, photo, description, delay }) => {
                                 gutterBottom
                                 variant="h5"
                                 component="div"
-                                sx={{ color: "white", fontWeight: "bold" }}
+                                sx={{
+                                    color: "white",
+                                    fontWeight: "bold",
+                                }}
                             >
                                 {title}
                             </Typography>

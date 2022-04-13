@@ -1,5 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@700&display=swap");
 :root {
-    --bg-dark: #000000;
+    --bg-dark: rgb(23, 23, 23);
+    --bg-accent: #272727;
     --color-primary: rgb(213, 200, 200);
     --color-primary-dark: #989393;
+    --color-secondary: #6e6a6a;
+    --ff-header: "Oxanium";
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--ff-header);
 }
