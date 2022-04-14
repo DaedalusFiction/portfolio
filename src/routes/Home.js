@@ -171,7 +171,7 @@ const Home = () => {
                     align="right"
                     type="Literary Magazine"
                     title="SICKTOOTH"
-                    content="Uses Firebase to receive submissions and store documents"
+                    content="Firebase and React, MUI"
                     background={sicktoothScreencap}
                     github="https://github.com/DaedalusFiction/sicktooth"
                     website="https://www.sicktooth.com/"
@@ -180,7 +180,7 @@ const Home = () => {
                     align="left"
                     type="Landing Page"
                     title="SNACKBAR"
-                    content="Created in React and MUI"
+                    content="React and MUI"
                     background={snackbarScreencap}
                     github="https://github.com/DaedalusFiction/snackbar"
                     website="https://www.snackbarband.com/"

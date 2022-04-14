@@ -34,12 +34,15 @@ const WebsitePreview = ({
                     sx={{
                         // border: "1px solid var(--color-secondary)",
                         display: "flex",
-                        flexFlow: align === "right" ? "row-reverse" : "row",
+                        flexFlow: {
+                            xs: "row",
+                            md: align === "right" ? "row-reverse" : "row",
+                        },
                         // flexWrap: "wrap",
-                        padding: "3rem",
+                        padding: "3rem 0",
                         gap: "3rem",
                         overflow: "hidden",
-                        justifyContent: "space-between",
+                        // justifyContent: "space-between",
                         alignItems: "center",
                     }}
                 >
@@ -67,7 +70,7 @@ const WebsitePreview = ({
                             <Typography
                                 variant="h5"
                                 color="primary"
-                                textAlign={align === "right" ? "start" : "end"}
+                                textAlign={"start"}
                             >
                                 {type}
                             </Typography>
@@ -81,7 +84,7 @@ const WebsitePreview = ({
                                 variant="h2"
                                 component="h3"
                                 color="white"
-                                textAlign={align === "right" ? "start" : "end"}
+                                textAlign={"start"}
                             >
                                 {title}
                             </Typography>
@@ -94,7 +97,7 @@ const WebsitePreview = ({
                             <Typography
                                 variant="h6"
                                 color="primary"
-                                textAlign={align === "right" ? "start" : "end"}
+                                textAlign={"start"}
                             >
                                 {content}
                             </Typography>
@@ -102,8 +105,7 @@ const WebsitePreview = ({
                         <Box
                             sx={{
                                 display: "flex",
-                                justifyContent:
-                                    align === "left" ? "end" : "start",
+                                justifyContent: "start",
                                 gap: "1em",
                                 marginTop: "1em",
                             }}
