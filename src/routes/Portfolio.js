@@ -1,11 +1,11 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
 import WebsitePreview from "../components/WebsitePreview";
-import sicktoothScreencap from "../assets/images/sicktoothScreencapBlurred.png";
-import roadtripScreencap from "../assets/images/roadtripScreencapBlurred.png";
-import snackbarScreencap from "../assets/images/snackbarScreencapBlurred.png";
-import playlistScreencap from "../assets/images/playlistScreencapBlurred.jpg";
-import streamerizeScreencap from "../assets/images/streamerizeScreencapBlurred.jpg";
+import sicktoothScreencap from "../assets/images/sicktoothScreencap.png";
+import roadtripScreencap from "../assets/images/roadtripScreencap.png";
+import snackbarScreencap from "../assets/images/snackbarScreencap.png";
+import playlistScreencap from "../assets/images/playlistScreencap.png";
+import streamerizeScreencap from "../assets/images/streamerizeScreencap.png";
 import { Box } from "@mui/system";
 import eclipse from "../assets/images/eclipse.jpg";
 

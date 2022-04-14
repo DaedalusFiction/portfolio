@@ -34,6 +34,7 @@ const InfoCard = ({ title, photo, description, delay }) => {
                             height="140"
                             image={photo}
                             alt="javascript code"
+                            sx={{ backgroundColor: "var(--bg-dark)" }}
                         />
                         <CardContent>
                             <Typography
