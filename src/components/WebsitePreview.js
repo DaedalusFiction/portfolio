@@ -36,7 +36,7 @@ const WebsitePreview = ({
                         display: "flex",
                         flexFlow: {
                             xs: "row",
-                            md: align === "right" ? "row-reverse" : "row",
+                            sm: align === "right" ? "row-reverse" : "row",
                         },
                         // flexWrap: "wrap",
                         padding: "3rem 0",
@@ -148,7 +148,7 @@ const WebsitePreview = ({
                             </Link>
                         </Box>
                     </Box>
-                    <Box sx={{ display: { xs: "none", md: "block" } }}>
+                    <Box sx={{ display: { xs: "none", sm: "block" } }}>
                         <img
                             src={background}
                             alt=""
