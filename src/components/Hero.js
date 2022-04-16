@@ -74,7 +74,7 @@ const Hero = () => {
                 >
                     <Slide direction="right" in={true} timeout={750}>
                         <Link
-                            href="https://github.com/DaedalusFiction"
+                            href="/portfolio"
                             target="_blank"
                             rel="noreferrer"
                             underline="none"

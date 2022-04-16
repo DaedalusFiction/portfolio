@@ -59,9 +59,10 @@ const darkTheme = createTheme({
 
                     color: "black",
                     "&:hover": {
-                        transition: "3000ms",
+                        transition: "300ms",
                         background:
                             "linear-gradient(45deg, #aaffa9 30%, #11ffbd 90%)",
+                        transform: "translateY(-3px)",
                     },
                 },
             },

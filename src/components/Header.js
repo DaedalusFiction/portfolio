@@ -40,12 +40,18 @@ const Header = () => {
                     justifyContent: "space-between",
                 }}
             >
-                <Box>
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
                     <Link
                         href="/"
                         underline="none"
                         sx={{
-                            display: { xs: "none", md: "flex" },
+                            display: { xs: "block", md: "block" },
                             color:
                                 location.pathname === "/"
                                     ? "var(--color-primary)"

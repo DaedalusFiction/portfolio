@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useRef, useState } from "react";
 import InView from "react-intersection-observer";
+import { FiArrowRight } from "react-icons/fi";
 
 const WebsitePreview = ({
     align,
@@ -85,6 +86,7 @@ const WebsitePreview = ({
                                 component="h3"
                                 color="white"
                                 textAlign={"start"}
+                                sx={{ lineHeight: "1em" }}
                             >
                                 {title}
                             </Typography>
@@ -111,41 +113,42 @@ const WebsitePreview = ({
                             }}
                             container={containerRef.current}
                         >
-                            <Link
-                                underline="none"
-                                href={github}
-                                target="_blank"
-                                rel="noreferrer"
-                                ref={containerRef}
+                            <Slide
+                                direction={align === "left" ? "right" : "left"}
+                                in={isInView}
+                                timeout={align === "left" ? 850 : 550}
+                                easing="ease-out"
                             >
-                                <Slide
-                                    direction={
-                                        align === "left" ? "right" : "left"
-                                    }
-                                    in={isInView}
-                                    timeout={align === "left" ? 850 : 550}
-                                    easing="ease-out"
+                                <Link
+                                    underline="none"
+                                    href={github}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    ref={containerRef}
                                 >
-                                    <Button>Github</Button>
-                                </Slide>
-                            </Link>
-                            <Link
-                                underline="none"
-                                href={website}
-                                target="_blank"
-                                rel="noreferrer"
+                                    <Button endIcon={<FiArrowRight />}>
+                                        Github
+                                    </Button>
+                                </Link>
+                            </Slide>
+                            <Slide
+                                direction={align === "left" ? "right" : "left"}
+                                in={isInView}
+                                timeout={{
+                                    enter: align === "left" ? 550 : 850,
+                                }}
                             >
-                                <Slide
-                                    direction={
-                                        align === "left" ? "right" : "left"
-                                    }
-                                    in={isInView}
-                                    timeout={align === "left" ? 550 : 850}
-                                    easing="ease-out"
+                                <Link
+                                    underline="none"
+                                    href={website}
+                                    target="_blank"
+                                    rel="noreferrer"
                                 >
-                                    <Button>Website</Button>
-                                </Slide>
-                            </Link>
+                                    <Button endIcon={<FiArrowRight />}>
+                                        Website
+                                    </Button>
+                                </Link>
+                            </Slide>
                         </Box>
                     </Box>
                     <Box sx={{ display: { xs: "none", sm: "block" } }}>
