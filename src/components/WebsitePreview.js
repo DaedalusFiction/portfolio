@@ -8,9 +8,10 @@ import {
     Slide,
     Typography,
 } from "@mui/material";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import InView from "react-intersection-observer";
 import { FiArrowRight } from "react-icons/fi";
+import VanillaTilt from "vanilla-tilt";
 
 const WebsitePreview = ({
     align,
@@ -23,6 +24,24 @@ const WebsitePreview = ({
 }) => {
     const [isInView, setIsInView] = useState(false);
     const containerRef = useRef(null);
+
+    const tilt = useRef(null);
+
+    useEffect(() => {
+        const tiltImage = tilt.current;
+        const options = {
+            speed: 1000,
+            max: 5,
+        };
+        console.log("added");
+
+        VanillaTilt.init(tilt.current, options);
+        return () => {
+            console.log("destroyed");
+            tiltImage.vanillaTilt.destroy();
+        };
+    }, []);
+
     return (
         <InView
             as="div"
@@ -152,11 +171,18 @@ const WebsitePreview = ({
                         </Box>
                     </Box>
                     <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                        <img
-                            src={background}
-                            alt=""
-                            style={{ width: "100%", height: "auto" }}
-                        />
+                        <Link href={website} target="_blank" rel="noreferrer">
+                            <img
+                                ref={tilt}
+                                src={background}
+                                alt=""
+                                style={{
+                                    width: "100%",
+                                    height: "auto",
+                                    padding: "1rem",
+                                }}
+                            />
+                        </Link>
                     </Box>
                 </Box>
             </Container>
