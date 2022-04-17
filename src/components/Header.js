@@ -52,6 +52,8 @@ const Header = () => {
                         underline="none"
                         sx={{
                             display: { xs: "block", md: "block" },
+                            fontFamily: "Oxanium",
+                            fontSize: "1.5rem",
                             color:
                                 location.pathname === "/"
                                     ? "var(--color-primary)"
@@ -64,7 +66,13 @@ const Header = () => {
                         DS
                     </Link>
                 </Box>
-                <Box sx={{ display: { xs: "none", md: "flex" }, gap: "3em" }}>
+                <Box
+                    sx={{
+                        display: { xs: "none", md: "flex" },
+                        gap: "3em",
+                        alignItems: "center",
+                    }}
+                >
                     <Link
                         href="services"
                         underline="none"

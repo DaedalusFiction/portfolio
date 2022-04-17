@@ -8,10 +8,9 @@ import {
     Fade,
     Link,
 } from "@mui/material";
-import earth from "../assets/images/earth.jpg";
+import earth from "../assets/images/backgrounds/earth.jpg";
 import React, { useRef, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { darkTheme } from "../assets/themes/primaryTheme";
 
 const Hero = () => {
     const [checked, setChecked] = useState(true);
@@ -22,6 +21,7 @@ const Hero = () => {
                 // backgroundImage: `url(${earth})`,
                 backgroundImage: `linear-gradient(to bottom, rgba(20, 20, 20, 0.4), rgba(23, 23, 23, 1)),
   url(${earth})`,
+                backgroundAttachment: "fixed",
                 backgroundSize: "cover",
                 padding: "20vw 0 10vw 0",
             }}

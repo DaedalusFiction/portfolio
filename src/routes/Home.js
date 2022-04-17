@@ -12,20 +12,15 @@ import {
 } from "@mui/material";
 import { InView } from "react-intersection-observer";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 
-import code3 from "../assets/images/code3.jpg";
-import chip from "../assets/images/chip.jpg";
-import mobile from "../assets/images/mobile.jpg";
 import sicktoothScreencap from "../assets/images/sicktoothScreencap.png";
 import roadtripScreencap from "../assets/images/roadtripScreencap.png";
 import snackbarScreencap from "../assets/images/snackbarScreencap.png";
-import coding from "../assets/images/graphics/coding.svg";
-import email from "../assets/images/graphics/email.svg";
+
 import design from "../assets/images/graphics/design.svg";
-import web from "../assets/images/graphics/web.svg";
-import startup from "../assets/images/graphics/startup.svg";
-import working from "../assets/images/graphics/working.svg";
+import mobile from "../assets/images/graphics/mobile.svg";
+import cloud from "../assets/images/graphics/cloud.svg";
+import security from "../assets/images/graphics/security.svg";
 
 import Hero from "../components/Hero";
 import InfoCard from "../components/InfoCard";
@@ -33,7 +28,7 @@ import WebsitePreview from "../components/WebsitePreview";
 import InfoCardHorizontal from "../components/InfoCardHorizontal";
 import TechIconCard from "../components/TechIconCard";
 
-import EmailForm from "../components/EmailForm";
+import GetStarted from "../components/GetStarted";
 
 const Home = () => {
     const [quoteInView, setQuoteInView] = useState(false);
@@ -68,7 +63,7 @@ const Home = () => {
                         <InfoCard
                             delay={800}
                             title="Responsive"
-                            photo={coding}
+                            photo={mobile}
                             description="Mobile-first designs, so that you can reach the widest
                     demographic possible and thrive in the modern market"
                         />
@@ -77,7 +72,7 @@ const Home = () => {
                         <InfoCard
                             delay={1200}
                             title="Reliable"
-                            photo={web}
+                            photo={cloud}
                             description="Important data stored in Google's cloud
                                     service, Firebase, so that it is always
                                     restorable, just in case something happens"
@@ -87,7 +82,7 @@ const Home = () => {
                         <InfoCard
                             delay={1700}
                             title="Secure"
-                            photo={working}
+                            photo={security}
                             description="Authentication and authorization handled by Google's OAuth 2.0, the internet's most used and trusted authentication service"
                         />
                     </Grid>
@@ -197,7 +192,10 @@ const Home = () => {
                 />
             </Box>
             <Box
-                sx={{ backgroundColor: "var(--bg-accent)", padding: "8rem 0" }}
+                sx={{
+                    backgroundColor: "var(--bg-accent)",
+                    padding: "8rem 0",
+                }}
             >
                 <Container maxWidth="sm">
                     <Typography
@@ -290,31 +288,7 @@ const Home = () => {
                     </Grid>
                 </Container>
             </Box>
-            <Box>
-                <Container
-                    maxWidth="lg"
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        gap: "2rem",
-                        padding: "8rem 1em 8rem 1em",
-                    }}
-                >
-                    <Typography
-                        variant="h3"
-                        textAlign="center"
-                        // sx={{ padding: "0 1em", textAlign: "center" }}
-                    >
-                        Ready to Get Started?
-                    </Typography>
-                    <Typography variant="h6" textAlign="center">
-                        Schedule a free one-on-one strategy session now!
-                    </Typography>
-                    <EmailForm />
-                </Container>
-            </Box>
+            <GetStarted />
         </Box>
     );
 };

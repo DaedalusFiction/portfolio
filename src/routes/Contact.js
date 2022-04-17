@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import EmailForm from "../components/EmailForm";
-import saturn from "../assets/images/saturn.jpg";
+import saturn from "../assets/images/backgrounds/saturn.jpg";
 
 const Contact = () => {
     return (
@@ -12,6 +12,7 @@ const Contact = () => {
   url(${saturn})`,
                 backgroundSize: "cover",
                 padding: "15vw 0 10vw 0",
+                backgroundAttachment: "fixed",
             }}
         >
             <Container maxWidth="lg">

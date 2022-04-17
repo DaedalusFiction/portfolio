@@ -7,7 +7,8 @@ import snackbarScreencap from "../assets/images/snackbarScreencap.png";
 import playlistScreencap from "../assets/images/playlistScreencap.png";
 import streamerizeScreencap from "../assets/images/streamerizeScreencap.png";
 import { Box } from "@mui/system";
-import eclipse from "../assets/images/eclipse.jpg";
+import eclipse from "../assets/images/backgrounds/eclipse.jpg";
+import GetStarted from "../components/GetStarted";
 
 const Portfolio = () => {
     return (
@@ -15,9 +16,10 @@ const Portfolio = () => {
             <Box
                 sx={{
                     // backgroundImage: `url(${earth})`,
-                    backgroundImage: `linear-gradient(to bottom, rgba(20, 20, 20, 0.1), rgba(23, 23, 23, 1)),
+                    background: `linear-gradient(to bottom, rgba(20, 20, 20, 0.1), rgba(23, 23, 23, 1)),
   url(${eclipse})`,
                     backgroundSize: "cover",
+                    backgroundAttachment: "fixed",
                     padding: "20vw 0 10vw 0",
                 }}
             >
@@ -85,6 +87,7 @@ const Portfolio = () => {
                 github="https://github.com/DaedalusFiction/radio-project"
                 website="https://www.streamerize.com/"
             />
+            <GetStarted />
         </>
     );
 };
