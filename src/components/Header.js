@@ -7,8 +7,8 @@ import {
     Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Link } from "@mui/material";
-import { useLocation } from "react-router-dom";
+// import { Link } from "@mui/material";
+import { useLocation, Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
@@ -41,6 +41,7 @@ const Header = () => {
                 }}
             >
                 <Box
+                    className="header-links"
                     sx={{
                         display: "flex",
                         justifyContent: "center",
@@ -48,9 +49,8 @@ const Header = () => {
                     }}
                 >
                     <Link
-                        href="/"
-                        underline="none"
-                        sx={{
+                        to="/"
+                        style={{
                             display: { xs: "block", md: "block" },
                             fontFamily: "Oxanium",
                             fontSize: "1.5rem",
@@ -58,15 +58,15 @@ const Header = () => {
                                 location.pathname === "/"
                                     ? "var(--color-primary)"
                                     : "var(--color-primary-dark)",
-                            "&:hover": {
-                                color: "var(--color-primary)",
-                            },
+
+                            textDecoration: "none",
                         }}
                     >
                         DS
                     </Link>
                 </Box>
                 <Box
+                    className="header-links"
                     sx={{
                         display: { xs: "none", md: "flex" },
                         gap: "3em",
@@ -74,46 +74,37 @@ const Header = () => {
                     }}
                 >
                     <Link
-                        href="services"
-                        underline="none"
-                        sx={{
+                        to="services"
+                        style={{
                             color:
                                 location.pathname === "/services"
                                     ? "var(--color-primary)"
                                     : "var(--color-primary-dark)",
-                            "&:hover": {
-                                color: "var(--color-primary)",
-                            },
+                            textDecoration: "none",
                         }}
                     >
                         Services
                     </Link>
                     <Link
-                        href="portfolio"
-                        underline="none"
-                        sx={{
+                        to="portfolio"
+                        style={{
                             color:
                                 location.pathname === "/portfolio"
                                     ? "var(--color-primary)"
                                     : "var(--color-primary-dark)",
-                            "&:hover": {
-                                color: "var(--color-primary)",
-                            },
+                            textDecoration: "none",
                         }}
                     >
                         Portfolio
                     </Link>
                     <Link
-                        href="contact"
-                        underline="none"
-                        sx={{
+                        to="contact"
+                        style={{
                             color:
                                 location.pathname === "/contact"
                                     ? "var(--color-primary)"
                                     : "var(--color-primary-dark)",
-                            "&:hover": {
-                                color: "var(--color-primary)",
-                            },
+                            textDecoration: "none",
                         }}
                     >
                         Contact
@@ -155,7 +146,7 @@ const Header = () => {
                             zIndex: "4",
                         }}
                     >
-                        <Link href="/" underline="none">
+                        <Link to="/">
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography
                                     textAlign="center"
@@ -165,7 +156,7 @@ const Header = () => {
                                 </Typography>
                             </MenuItem>
                         </Link>
-                        <Link href="services" underline="none">
+                        <Link to="services">
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography
                                     textAlign="center"
@@ -175,7 +166,7 @@ const Header = () => {
                                 </Typography>
                             </MenuItem>
                         </Link>
-                        <Link href="portfolio" underline="none">
+                        <Link to="portfolio">
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography
                                     textAlign="center"
@@ -185,7 +176,7 @@ const Header = () => {
                                 </Typography>
                             </MenuItem>
                         </Link>
-                        <Link href="contact" underline="none">
+                        <Link to="contact">
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography
                                     textAlign="center"

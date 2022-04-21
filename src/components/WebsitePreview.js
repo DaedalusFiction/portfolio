@@ -46,7 +46,9 @@ const WebsitePreview = ({
         <InView
             as="div"
             onChange={(inView, entry) => {
-                setIsInView(inView);
+                if (inView) {
+                    setIsInView(true);
+                }
             }}
         >
             <Container>

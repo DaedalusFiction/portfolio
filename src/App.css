@@ -18,3 +18,7 @@ h3,
 h4 {
     font-family: var(--ff-header);
 }
+
+.header-links a:hover {
+    color: var(--color-primary) !important;
+}
