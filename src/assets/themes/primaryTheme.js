@@ -54,7 +54,7 @@ const darkTheme = createTheme({
                     background:
                         "linear-gradient(-45deg, #aaffa9 30%, #11ffbd 90%)",
                     border: 0,
-                    padding: ".75em 1.5em",
+                    padding: ".6em 1.5em",
                     textDecoration: "none",
 
                     color: "black",

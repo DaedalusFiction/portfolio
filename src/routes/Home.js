@@ -112,7 +112,9 @@ const Home = () => {
                             <InView
                                 as="div"
                                 onChange={(inView, entry) => {
-                                    setQuoteInView(inView);
+                                    if (inView) {
+                                        setQuoteInView(true);
+                                    }
                                 }}
                             >
                                 <Fade in={quoteInView} timeout={800}>
