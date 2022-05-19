@@ -23,6 +23,10 @@ const Header = () => {
         setAnchorElNav(null);
     };
 
+    const handleNavMenuClick = () => {
+        window.scrollTo(0, 0);
+    };
+
     return (
         <Box
             sx={{
@@ -50,6 +54,7 @@ const Header = () => {
                 >
                     <Link
                         to="/"
+                        onClick={handleNavMenuClick}
                         style={{
                             display: { xs: "block", md: "block" },
                             fontFamily: "Oxanium",
@@ -75,6 +80,7 @@ const Header = () => {
                 >
                     <Link
                         to="services"
+                        onClick={handleNavMenuClick}
                         style={{
                             color:
                                 location.pathname === "/services"
@@ -87,6 +93,7 @@ const Header = () => {
                     </Link>
                     <Link
                         to="portfolio"
+                        onClick={handleNavMenuClick}
                         style={{
                             color:
                                 location.pathname === "/portfolio"
@@ -99,6 +106,7 @@ const Header = () => {
                     </Link>
                     <Link
                         to="contact"
+                        onClick={handleNavMenuClick}
                         style={{
                             color:
                                 location.pathname === "/contact"
@@ -146,7 +154,7 @@ const Header = () => {
                             zIndex: "4",
                         }}
                     >
-                        <Link to="/">
+                        <Link to="/" onClick={handleNavMenuClick}>
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography
                                     textAlign="center"
@@ -156,7 +164,7 @@ const Header = () => {
                                 </Typography>
                             </MenuItem>
                         </Link>
-                        <Link to="services">
+                        <Link to="services" onClick={handleNavMenuClick}>
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography
                                     textAlign="center"
@@ -166,7 +174,7 @@ const Header = () => {
                                 </Typography>
                             </MenuItem>
                         </Link>
-                        <Link to="portfolio">
+                        <Link to="portfolio" onClick={handleNavMenuClick}>
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography
                                     textAlign="center"
@@ -176,7 +184,7 @@ const Header = () => {
                                 </Typography>
                             </MenuItem>
                         </Link>
-                        <Link to="contact">
+                        <Link to="contact" onClick={handleNavMenuClick}>
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography
                                     textAlign="center"
