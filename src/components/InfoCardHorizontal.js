@@ -35,65 +35,52 @@ const InfoCardHorizontal = ({ title, description, delay }) => {
                 }}
             >
                 <Box>
-                    <Slide
-                        in={isInView}
-                        direction="left"
-                        timeout={{
-                            enter: delay,
+                    <Card
+                        sx={{
+                            minWidth: "10em",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            border: "1px solid var(--color-primary-dark)",
+                            borderRadius: {
+                                xs: "3px 3px 0 0",
+                                md: "3px 0 0 3px",
+                            },
                         }}
-                        sx={{ display: "flex", justifyContent: "center" }}
                     >
-                        <Box>
-                            <Card
-                                sx={{
-                                    minWidth: "10em",
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    border: "1px solid var(--color-primary-dark)",
-                                    borderRadius: {
-                                        xs: "3px 3px 0 0",
-                                        md: "3px 0 0 3px",
-                                    },
-                                }}
-                            >
-                                <Typography
-                                    variant="h5"
-                                    component="div"
-                                    sx={{
-                                        color: "white",
-                                        fontWeight: "bold",
-                                        padding: "1em",
-                                    }}
-                                >
-                                    {title}
-                                </Typography>
-                            </Card>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    width: "100%",
-                                    borderTop: "1px solid var(--color-primary)",
-                                    borderRight:
-                                        "1px solid var(--color-primary)",
-                                    borderBottom:
-                                        "1px solid var(--color-primary)",
-                                    borderLeft: {
-                                        xs: "1px solid var(--color-primary)",
-                                        sm: "none",
-                                    },
-                                }}
-                            >
-                                <Typography
-                                    variant="p"
-                                    color="primary"
-                                    sx={{ padding: "1em" }}
-                                >
-                                    {description}
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </Slide>
+                        <Typography
+                            variant="h5"
+                            component="div"
+                            sx={{
+                                color: "white",
+                                fontWeight: "bold",
+                                padding: "1em",
+                            }}
+                        >
+                            {title}
+                        </Typography>
+                    </Card>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            width: "100%",
+                            borderTop: "1px solid var(--color-primary)",
+                            borderRight: "1px solid var(--color-primary)",
+                            borderBottom: "1px solid var(--color-primary)",
+                            borderLeft: {
+                                xs: "1px solid var(--color-primary)",
+                                sm: "none",
+                            },
+                        }}
+                    >
+                        <Typography
+                            variant="p"
+                            color="primary"
+                            sx={{ padding: "1em" }}
+                        >
+                            {description}
+                        </Typography>
+                    </Box>
                 </Box>
             </Fade>
         </InView>
