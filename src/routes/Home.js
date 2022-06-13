@@ -16,6 +16,7 @@ import { useState } from "react";
 import sicktoothScreencap from "../assets/images/sicktoothScreencap.png";
 import roadtripScreencap from "../assets/images/roadtripScreencap.png";
 import snackbarScreencap from "../assets/images/snackbarScreencap.png";
+import pfddScreencap from "../assets/images/pfddScreencap.png";
 
 import design from "../assets/images/graphics/design.svg";
 import mobile from "../assets/images/graphics/mobile.svg";
@@ -168,13 +169,22 @@ const Home = () => {
                     align="right"
                     type="Literary Magazine"
                     title="SICKTOOTH"
-                    content="Firebase and React, MUI"
+                    content="Firebase, React, MUI, Markdown"
                     background={sicktoothScreencap}
                     github="https://github.com/DaedalusFiction/sicktooth"
                     website="https://www.sicktooth.com/"
                 />
                 <WebsitePreview
                     align="left"
+                    type="Event Page"
+                    title="KDA PFDD"
+                    content="Firebase, React, MUI"
+                    background={pfddScreencap}
+                    github="https://github.com/DaedalusFiction/pfdd"
+                    website="https://www.kdapfdd.net/"
+                />
+                <WebsitePreview
+                    align="right"
                     type="Landing Page"
                     title="SNACKBAR"
                     content="React and MUI"
@@ -184,7 +194,7 @@ const Home = () => {
                 />
 
                 <WebsitePreview
-                    align="right"
+                    align="left"
                     type="Event"
                     title="The Great Road Trip"
                     content="Form submissions, photo gallery"
