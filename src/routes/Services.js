@@ -34,11 +34,8 @@ const Services = () => {
                             lineHeight: "1.4em",
                         }}
                     >
-                        I am committed to making sure my that my clients are
-                        100% satisfied with the websites I build for them. If at
-                        any point you decide that you want to go in a different
-                        direction, I'll refund your money entirely, zero
-                        questions asked.
+                        I am committed to making sure that you are 100%
+                        satisfied with the website I'll build for you.
                     </Typography>
                 </Container>
             </Box>
@@ -74,7 +71,7 @@ const Services = () => {
                                 delay={800}
                                 title="Step Two: Gather"
                                 photo={startup}
-                                description="Select your color scheme and fonts, write up any descriptions and lists, collate photos, anything that you want displayed on your website"
+                                description="Determine what information you'd like to convey and what functions you'd like your website to perform, write up descriptions and lists, and collate photos."
                             />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -82,7 +79,7 @@ const Services = () => {
                                 delay={1200}
                                 title="Step Three: Create"
                                 photo={coding}
-                                description="This one's mine. For most projects, I'll be able to create an initial version within a week. For the entire second week, I'll revise anything you like. "
+                                description="This one's mine. For most projects, I'll be able to create an initial version within a week. For the entire second week, I'll revise anything you like."
                             />
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -90,7 +87,7 @@ const Services = () => {
                                 delay={1700}
                                 title="Step Four: Relax"
                                 photo={web}
-                                description="Once you're completely satisfied with your website, I'll maintain the domain and host it myself forever, or I'll transfer part or all of it to you."
+                                description="For a small semi-annual fee I'll host and maintain your website. When your business takes off, scaling up is as easy as upgrading your data plans."
                             />
                         </Grid>
                     </Grid>
