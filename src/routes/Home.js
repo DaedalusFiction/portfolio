@@ -173,7 +173,7 @@ const Home = () => {
                     content="Redux, Firebase, MUI"
                     background={forumScreencap}
                     github="https://github.com/DaedalusFiction/forum-template"
-                    website="https://www.sicktooth.com/"
+                    website="https://customforum.netlify.app"
                 />
                 <WebsitePreview
                     align="right"
@@ -182,7 +182,7 @@ const Home = () => {
                     content="Firebase, React, MUI, Markdown"
                     background={sicktoothScreencap}
                     github="https://github.com/DaedalusFiction/sicktooth"
-                    website="https://customforum.netlify.app"
+                    website="https://www.sicktooth.com/"
                 />
                 <WebsitePreview
                     align="left"
