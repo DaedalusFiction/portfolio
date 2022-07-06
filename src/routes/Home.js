@@ -17,6 +17,7 @@ import sicktoothScreencap from "../assets/images/sicktoothScreencap.png";
 import roadtripScreencap from "../assets/images/roadtripScreencap.png";
 import snackbarScreencap from "../assets/images/snackbarScreencap.png";
 import pfddScreencap from "../assets/images/pfddScreencap.png";
+import forumScreencap from "../assets/images/forumScreencap.png";
 
 import design from "../assets/images/graphics/design.svg";
 import mobile from "../assets/images/graphics/mobile.svg";
@@ -166,13 +167,22 @@ const Home = () => {
                     My Work
                 </Typography>
                 <WebsitePreview
+                    align="left"
+                    type="Forum Website Template"
+                    title="The Forums"
+                    content="Redux, Firebase, MUI"
+                    background={forumScreencap}
+                    github="https://github.com/DaedalusFiction/forum-template"
+                    website="https://www.sicktooth.com/"
+                />
+                <WebsitePreview
                     align="right"
                     type="Literary Magazine"
                     title="SICKTOOTH"
                     content="Firebase, React, MUI, Markdown"
                     background={sicktoothScreencap}
                     github="https://github.com/DaedalusFiction/sicktooth"
-                    website="https://www.sicktooth.com/"
+                    website="https://customforum.netlify.app"
                 />
                 <WebsitePreview
                     align="left"
