@@ -10,6 +10,7 @@ import React, { useState } from "react";
 // import { Link } from "@mui/material";
 import { useLocation, Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
+import logo from "../assets/images/logo.png";
 
 const Header = () => {
     const location = useLocation();
@@ -33,7 +34,7 @@ const Header = () => {
                 backgroundColor: "rgba(0 ,0 ,0 , 0.7)",
                 position: "sticky",
                 top: "0",
-                padding: "1em 0",
+                padding: ".25em 0",
                 borderBottom: "1px solid var(--color-secondary)",
                 zIndex: "3",
             }}
@@ -52,22 +53,21 @@ const Header = () => {
                         alignItems: "center",
                     }}
                 >
-                    <Link
-                        to="/"
-                        onClick={handleNavMenuClick}
-                        style={{
-                            display: { xs: "block", md: "block" },
-                            fontFamily: "Oxanium",
-                            fontSize: "1.5rem",
-                            color:
-                                location.pathname === "/"
-                                    ? "var(--color-primary)"
-                                    : "var(--color-primary-dark)",
+                    <Link to="/" onClick={handleNavMenuClick}>
+                        <img
+                            style={{
+                                display: { xs: "block", md: "block" },
+                                width: "3rem",
+                                filter:
+                                    location.pathname === "/"
+                                        ? "opacity(70%)"
+                                        : "opacity(50%)",
 
-                            textDecoration: "none",
-                        }}
-                    >
-                        DS
+                                textDecoration: "none",
+                            }}
+                            src={logo}
+                            alt="nautilus shell logo"
+                        />
                     </Link>
                 </Box>
                 <Box
