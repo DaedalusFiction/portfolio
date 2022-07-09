@@ -6,11 +6,11 @@ import {
     Grow,
     Slide,
     Fade,
-    Link,
 } from "@mui/material";
 import earth from "../assets/images/backgrounds/earth.jpg";
 import React, { useRef, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     const [checked, setChecked] = useState(true);
@@ -73,21 +73,23 @@ const Hero = () => {
                     }}
                 >
                     <Slide direction="right" in={true} timeout={750}>
-                        <Link href="/portfolio" underline="none">
+                        <Link to="/portfolio">
                             <Button endIcon={<FiArrowRight />}>
                                 Portfolio
                             </Button>
                         </Link>
                     </Slide>
                     <Slide direction="right" in={true} timeout={350}>
-                        <Link
-                            href="https://github.com/DaedalusFiction"
-                            target="_blank"
-                            rel="noreferrer"
-                            underline="none"
-                        >
-                            <Button endIcon={<FiArrowRight />}>Github</Button>
-                        </Link>
+                        <div>
+                            <Button
+                                href="https://github.com/DaedalusFiction"
+                                target="_blank"
+                                rel="noreferrer"
+                                endIcon={<FiArrowRight />}
+                            >
+                                Github
+                            </Button>
+                        </div>
                     </Slide>
                 </Box>
             </Container>
