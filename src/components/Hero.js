@@ -73,12 +73,7 @@ const Hero = () => {
                     }}
                 >
                     <Slide direction="right" in={true} timeout={750}>
-                        <Link
-                            href="/portfolio"
-                            target="_blank"
-                            rel="noreferrer"
-                            underline="none"
-                        >
+                        <Link href="/portfolio" underline="none">
                             <Button endIcon={<FiArrowRight />}>
                                 Portfolio
                             </Button>
