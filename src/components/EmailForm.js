@@ -27,15 +27,9 @@ const EmailForm = () => {
                 templateParams,
                 "aMDOy4kUud9rd0Yg9"
             )
-            .then(
-                function (response) {
-                    console.log("SUCCESS!", response.status, response.text);
-                    setEmailSent(true);
-                },
-                function (error) {
-                    console.log("FAILED...", error);
-                }
-            );
+            .then(function () {
+                setEmailSent(true);
+            });
     };
 
     function ValidateEmail(mail) {

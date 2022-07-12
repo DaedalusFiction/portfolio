@@ -8,7 +8,7 @@ import {
     Slide,
     Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { InView } from "react-intersection-observer";
 
 const InfoCardHorizontal = ({ title, description, delay }) => {

@@ -3,7 +3,6 @@ import {
     Button,
     Container,
     Fade,
-    Grid,
     Link,
     Slide,
     Typography,
@@ -33,11 +32,9 @@ const WebsitePreview = ({
             speed: 1000,
             max: 5,
         };
-        console.log("added");
 
         VanillaTilt.init(tilt.current, options);
         return () => {
-            console.log("destroyed");
             tiltImage.vanillaTilt.destroy();
         };
     }, []);
